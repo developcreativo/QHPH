@@ -4,20 +4,20 @@ from lugares.models import Lugar
 
 from rest_framework import serializers
 
-class EventoSerializer(serializers.HyperLinkedModelSerializer):
+class EventoSerializer(serializers.HyperlinkedModelSerializer):
 
 	class Meta:
 		model = Evento
-		fields = ('nombre', 'fecha', 'hora', 'descripcion', 'lugar')
+		fields = ('id', 'nombre', 'fecha', 'hora', 'descripcion', 'lugar')
 
-class CiudadSerializer(serializers.HyperLinkedModelSerializer):
+class CiudadSerializer(serializers.HyperlinkedModelSerializer):
 
 	class Meta:
 		model = Ciudad
-		fields = ('ciudad')
+		fields = ('id', 'ciudad')
 
-class LugarSerializer(serializers.HyperLinkedModelSerializer):
+class LugarSerializer(serializers.HyperlinkedModelSerializer):
 
 	class Meta:
 		model = Lugar
-		fields = ('lugar', 'ciudad')
+		fields = ('id', 'nombre', 'ciudad')

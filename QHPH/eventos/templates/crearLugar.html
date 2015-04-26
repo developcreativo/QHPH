@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Crear Lugar</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+</head>
+<body>
+	<div class="container">
+	<div class="row">
+		<h2>Crear Lugar</h2>
+		<form method="POST">
+
+		{% csrf_token %}
+
+		{{ form.as_p }}
+		<input type="submit" class="btn btn-success" value="Crear Lugar">
+	</div>
+	</div>
+</body>
+</html>

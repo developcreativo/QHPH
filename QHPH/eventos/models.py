@@ -5,9 +5,9 @@ from lugares.models import Lugar
 class Evento(models.Model):
 
 	nombre = models.CharField(max_length=200)
-	fecha = models.DateField()
-	hora = models.DateTimeField()
-	descripcion = models.TextField()
+	fecha = models.DateField(blank=True)
+	hora = models.DateTimeField(blank=True)
+	descripcion = models.TextField(blank=True)
 
 	lugar = models.ForeignKey(Lugar)
 

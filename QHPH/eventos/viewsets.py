@@ -6,7 +6,6 @@ from rest_framework import viewsets
 
 from .serializers import EventoSerializer, CiudadSerializer, LugarSerializer
 
-
 class EventoViewSet(viewsets.ModelViewSet):
 
 	queryset = Evento.objects.all()
